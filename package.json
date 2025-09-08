@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test:register": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @register",
-    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @login not @skip",
+    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags \"@login and not @skip\"",
     "test:articles": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @articles",
     "test:all": "npm run test:register && npm run test:login && npm run test:articles"
   },
