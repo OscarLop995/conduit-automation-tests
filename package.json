@@ -1,0 +1,25 @@
+{
+  "name": "conduit-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test:register": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @register",
+    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @login not @skip",
+    "test:articles": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require ./tests/support/**/*.ts --require ./tests/step-definitions/**/*.ts --tags @articles",
+    "test:all": "npm run test:register && npm run test:login && npm run test:articles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.2.0",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.0.0"
+  }
+}
