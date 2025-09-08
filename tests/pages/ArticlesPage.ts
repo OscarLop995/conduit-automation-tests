@@ -22,15 +22,6 @@ export class ArticlesPage extends BasePage {
         artDescription = generateRandomDescription(),
         artBody = generateRandomBody()
     ) {
-        // const fields = [
-        //     { placeholder: 'Article Title', value: generateRandomTitle() },
-        //     { placeholder: "What's this article about?", value: generateRandomDescription() },
-        //     { placeholder: 'Write your article (in markdown)', value: generateRandomBody() }
-        // ]
-        // for (const field of fields) {
-        //     await this.page.getByPlaceholder(field.placeholder).pressSequentially(field.value);
-        //     }
-        //     return fields;
         await this.articleTitleInput.pressSequentially(artTitle, { delay: 30 });
         await expect(this.articleTitleInput).toHaveValue(artTitle);
         await this.articleAboutInput.pressSequentially(artDescription, { delay: 5 });
@@ -43,10 +34,4 @@ export class ArticlesPage extends BasePage {
     async submitArticle() {
         await this.page.getByRole('button', { name: 'Publish Article' }).click();
     }
-
-    // async getArticleTitle() {
-    //     await this.page.getByRole('link', { name: 'Home' }).click();
-    //     await this.page.getByRole('link', { name: 'Global Feed' }).click();
-    //     await this.page.getByRole('link', { name: 'Global Feed' }).click();
-    // }
 }

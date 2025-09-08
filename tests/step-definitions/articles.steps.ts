@@ -16,10 +16,8 @@ When('the user creates a new article with valid details', async function (this: 
     await expect(this.page).toHaveURL('http://localhost:3001/editor');
     const { artTitle } = await articlesPage.fillArticleDetails();
     this.lastArticleTitle = artTitle;
-    //await this.page.pause();
     await expect(this.page.getByRole('button', { name: 'Publish Article' })).toBeEnabled();
     await articlesPage.submitArticle();
-    //await this.page.pause();
 });
 
 Then('the article should be successfully created and displayed', async function (this: CustomWorld) {
