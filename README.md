@@ -127,6 +127,11 @@ npm run test:all
 npx playwright show-report
 ```
 
+## Bug Reports
+During the testing process, 3 bugs were identified and documented in Azure DevOps.
+The exported bug report can be found here:
+[Bug Reports (Excel)](docs/conduit_bugs_report.csv)
+
 ---
 
 ## ✅ Deliverable
