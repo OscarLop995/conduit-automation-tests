@@ -1,0 +1,4 @@
+﻿Work Item Type,ID,Title,Assigned To,State,Tags,Comment Count,Priority
+"Bug","3","The application allows a registration without username","Oscar Lopez <oscarlop995@hotmail.com>","New",,"1","3"
+"Bug","2","User's articles do not appear on their personal board","Oscar Lopez <oscarlop995@hotmail.com>","New",,"1","3"
+"Bug","1","Login form does not show error message for invalid credentials","Oscar Lopez <oscarlop995@hotmail.com>","New",,"1","2"
